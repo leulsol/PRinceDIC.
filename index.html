@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title> 
+    <style>
+body {
+        background-color: teal;
+    } 
+h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 450;
+        color: rgb(0, 0, 56);
+        font-size: xxx-large;
+    }
+input {
+    border-radius: 5mm;
+    width: 3.5in;
+    background-color: snow;
+    padding-left: 3mm;
+    height: 6mm;
+    }
+button {
+    border-radius:10;
+    }
+
+div.ans {
+    border-radius: 1cm;
+    width: 3in; 
+    background-color: lavender;
+    padding-left: 3mm;
+    padding-right: 3mm;
+}
+</style>
+
+</head>
+<center>
+<body bgcolor>
+    <h1>
+        Prince Dictionary
+    </h1>
+<div class="box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search" id="search-term"/> <br/>
+    <button id="search-button">Go</button>
+</div>
+
+<div class="ans" id="definition">    </div>
+
+<script src="dictionary.js"></script>
+</body>
+
+</html>
