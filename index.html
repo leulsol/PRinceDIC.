@@ -6,48 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dictionary</title> 
     <style>
+        /* body styles */
 body {
-        background-color: teal;
-    } 
-h1 {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: 450;
-        color: rgb(0, 0, 56);
-        font-size: xxx-large;
-    }
-input {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  /* header styles */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
+  }
+  
+ h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    font-family: cursive;
+  }
+  
+  /* container styles */
+  div.ans {
+    width: 65%;
+    margin: 0 auto;
+    background-color: bisque;
+    backdrop-filter: color(aqua);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.1) inset;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(1deg) rotateY(-1deg);
+  }
+  
+  /* result styles */
+  .result {
+    margin-top: 20px;
+    transform-style: preserve-3d;
+  }
+  
+  .result h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .result h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .result h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .result p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .result:first-child {
+    margin-top: 0;
+  }
+  input {
     border-radius: 5mm;
-    width: 3.5in;
+    width: 5in;
     background-color: snow;
     padding-left: 3mm;
-    height: 6mm;
+    height: 10mm;
     }
-button {
-    border-radius:10;
-    }
-
-div.ans {
-    border-radius: 1cm;
-    width: 3in; 
-    background-color: lavender;
-    padding-left: 3mm;
-    padding-right: 3mm;
-}
-</style>
+  
+  /* button styles */
+  button {
+    border: none;
+    background-color: #0074D9;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0062ac;
+    transform: translateZ(5px);
+  }
+  
+  button:active {
+    transform: translateY(2px) translateZ(0px);
+    box-shadow: none;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+    </style>
 
 </head>
 <center>
-<body bgcolor>
+<body>
     <h1>
         Prince Dictionary
     </h1>
+    
 <div class="box">
     <i class="fas fa-search"></i>
-    <input type="text" placeholder="Search" id="search-term"/> <br/>
-    <button id="search-button">Go</button>
+    <input type="text" placeholder="Search" id="search-input"/> <br/>
+    <button id="search-btn">Go</button>
 </div>
 
-<div class="ans" id="definition">    </div>
+<div class="ans" id="results-container">    </div>
 
 <script src="dictionary.js"></script>
 </body>
